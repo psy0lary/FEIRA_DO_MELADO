@@ -3,65 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feira do Melado</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>Feira do Melado - Início</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Feira do Melado</h1>
         <nav>
             <ul>
-                <li><a href="#cadastro">Cadastro</a></li>
-                <li><a href="#historia">História</a></li>
-                <li><a href="#atracoes">Atrações</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="historia/historia.html">História</a></li>
+                <li><a href="atracoes/atracoes.html">Atrações</a></li>
+                <li><a href="galeria/galeria.html">Galeria de Fotos</a></li>
+                <li><a href="cadastro/cadastro.html">Cadastro</a></li>
+                <li><a href="contato/contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="cadastro">
-        <h2>Cadastro</h2>
-        <form>
-            <input type="text" placeholder="Nome" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Mensagem" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <h1>Bem-vindo à Feira do Melado!</h1>
+            <p>Descubra a doçura e a tradição da nossa feira.</p>
+            <p>Um evento imperdível para toda a família, repleto de sabores, cultura e diversão.</p>
+            <a href="atracoes/atracoes.html" class="button">Confira as Atrações!</a>
+        </section>
 
-    <section id="historia">
-        <h2>História</h2>
-        <p>A Feira do Melado é uma tradicional celebração da nossa cultura local...</p>
-    </section>
+        <section class="content-section">
+            <h2>Destaques da Feira</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>O Sabor do Melado</h3>
+                    <p>Conheça a variedade de melados produzidos artesanalmente, com técnicas passadas de geração em geração. Pureza e doçura em cada gota!</p>
+                    <a href="galeria/galeria.html" class="button-small">Ver Fotos</a>
+                </div>
+                <div class="card">
+                    <h3>Shows e Apresentações</h3>
+                    <p>Uma programação cultural rica, com shows musicais e apresentações folclóricas que animam todos os dias da feira.</p>
+                    <a href="atracoes/atracoes.html" class="button-small">Ver Programação</a>
+                </div>
+                <div class="card">
+                    <h3>Artesanato Local</h3>
+                    <p>Produtos únicos feitos à mão por artesãos da região, ideais para levar uma lembrança especial da Feira do Melado.</p>
+                    <a href="galeria/galeria.html" class="button-small">Nossa Galeria</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <section id="atracoes">
-        <h2>Atrações</h2>
-        <ul>
-            <li>Shows musicais</li>
-            <li>Feira de artesanato</li>
-            <li>Comidas típicas com muito melado</li>
-        </ul>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Email: contato@feiradomelado.com</p>
-        <p>Telefone: (99) 99999-9999</p>
-    </section>
-
-    <section id="galeria" class="galeria">
-        <h2>Galeria de Fotos</h2>
-        <div class="fotos">
-            <img src="img1.jpg" alt="Foto 1">
-            <img src="img2.jpg" alt="Foto 2">
-            <img src="img3.jpg" alt="Foto 3">
-            <img src="img4.jpg" alt="Foto 4">
-            <img src="img5.jpg" alt="Foto 5">
-            <img src="img6.jpg" alt="Foto 6">
-        </div>
-    </section>
+    <footer>
+        <p>&copy; 2025 Feira do Melado. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
-

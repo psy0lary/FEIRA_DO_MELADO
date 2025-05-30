@@ -1,110 +1,34 @@
-body {
-    margin: 0;
-    font-family: 'Great Vibes', cursive;
-    background-color: #fff8e1;
-    color: #5d4037;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
-    background-color: #ffcc80;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 3em;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    text-decoration: none;
-    color: #6d4c41;
-    font-size: 1.2em;
-}
-
-section {
-    background-color: #fff3e0;
-    margin: 20px;
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    max-width: 1000px;
-    width: 90%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    max-width: 400px;
-    margin: auto;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #bcaaa4;
-    border-radius: 10px;
-    font-family: 'Great Vibes', cursive;
-    font-size: 1.1em;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #ffb74d;
+/* Novos estilos para o index.html */
+.button-small {
+    background-color: var(--cor-destaque-melado);
+    color: #FFF;
+    padding: 8px 15px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    font-family: 'Great Vibes', cursive;
-    font-size: 1.2em;
-    color: #4e342e;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: 'Dancing Script', cursive;
+    text-decoration: none; /* Para remover sublinhado dos links */
+    display: inline-block; /* Para que o padding funcione corretamente */
+    margin-top: 15px;
 }
 
-button:hover {
-    background-color: #ffa726;
+.button-small:hover {
+    background-color: var(--cor-melado-escuro);
 }
 
-ul {
-    padding-left: 0;
-    list-style: none;
-    line-height: 2;
-    font-size: 1.2em;
-}
-
-.galeria .fotos {
+.card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
 }
 
-.galeria img {
-    width: 100%;
-    height: 200px;
+/* Para garantir que as imagens da galeria no main (caso você volte a colocar no index)
+   mantenham o tamanho fixo (no galeria.html já está ok com o ../img) */
+.gallery-item img {
+    height: 300px; /* Mantém a altura fixa para consistência */
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.galeria img:hover {
-    transform: scale(1.05);
 }

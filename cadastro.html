@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Feira do Melado</title>
+    <link rel="stylesheet" href="../css/style.css"> <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Início</a></li> <li><a href="../historia/historia.html">História</a></li>
+                <li><a href="../atracoes/atracoes.html">Atrações</a></li>
+                <li><a href="../galeria/galeria.html">Galeria de Fotos</a></li>
+                <li><a href="cadastro.html" class="active">Cadastro</a></li>
+                <li><a href="../contato/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cadastro" class="content-section">
+            <h2>Faça seu Cadastro</h2>
+            <div class="card">
+                <p>Preencha o formulário abaixo para receber novidades, a programação completa da feira e participar de promoções exclusivas!</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone (com DDD):</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+                    <div class="form-group">
+                        <label for="interesses">Quais são seus interesses na feira?</label>
+                        <select id="interesses" name="interesses">
+                            <option value="">Selecione...</option>
+                            <option value="melado">Melado e derivados</option>
+                            <option value="artesanato">Artesanato</option>
+                            <option value="shows">Shows musicais</option>
+                            <option value="culinaria">Gastronomia local</option>
+                            <option value="geral">Todos os anteriores</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Deixe uma mensagem (opcional):</label>
+                        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="button">Cadastrar Agora</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Feira do Melado. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
