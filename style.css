@@ -1,22 +1,193 @@
-/* Novos estilos para o index.html */
-.button-small {
-    background-color: var(--cor-destaque-melado);
-    color: #FFF;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    font-family: 'Dancing Script', cursive;
-    text-decoration: none; /* Para remover sublinhado dos links */
-    display: inline-block; /* Para que o padding funcione corretamente */
-    margin-top: 15px;
+/* Importação das fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); /* Para o texto do banner */
+
+/* Variáveis de cores */
+:root {
+    --cor-melado-claro: #F5DEB3; /* Bege claro */
+    --cor-melado-medio: #D2B48C; /* Marrom claro */
+    --cor-melado-escuro: #8B4513; /* Marrom escuro */
+    --cor-destaque-melado: #FFA500; /* Laranja mel */
+    --cor-texto: #333;
+    --cor-fundo-card: #FFF;
+    --cor-borda-card: #EEE;
 }
 
-.button-small:hover {
-    background-color: var(--cor-melado-escuro);
+body {
+    font-family: 'Dancing Script', cursive; /* Aplica a fonte script por padrão */
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-melado-claro);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Cabeçalho Superior (top-header) */
+.top-header {
+    background-color: var(--cor-melado-escuro); /* Cor de fundo da barra superior */
+    color: #FFF;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex; /* Para alinhar logo e navegação */
+    justify-content: space-between; /* Espaço entre logo e nav */
+    align-items: center; /* Alinhamento vertical */
+    position: sticky; /* Fica fixo no topo */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre o ícone e o título */
+}
+
+.logo img {
+    height: 32px; /* Tamanho do ícone */
+    width: auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-family: 'Montserrat', sans-serif; /* Fonte para o título da feira */
+    color: var(--cor-destaque-melado); /* Cor do título */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Dancing Script', cursive; /* Mantém a fonte script para os links */
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: var(--cor-destaque-melado);
+    border-radius: 5px;
+}
+
+/* Banner Principal (hero-banner) - Substitui o .hero anterior */
+.hero-banner {
+    background-image: url('../img/background_feira.jpg'); /* Caminho para sua imagem de fundo */
+    background-size: cover; /* Cobre todo o elemento */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    color: #FFF;
+    text-align: center;
+    padding: 100px 20px; /* Espaçamento interno grande */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    min-height: 400px; /* Altura mínima para o banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Para a sobreposição escura */
+}
+
+.hero-banner::before { /* Camada escura sobre a imagem para melhor leitura do texto */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% de opacidade preta */
+    z-index: 1;
+}
+
+.hero-banner h2 {
+    font-family: 'Montserrat', sans-serif; /* Fonte robusta para o título do banner */
+    font-size: 3.5rem;
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8); /* Sombra para o texto para destacar */
+    z-index: 2; /* Garante que o texto fique acima da sobreposição */
+    position: relative; /* Para o z-index funcionar */
+    max-width: 900px; /* Limita a largura do texto */
+    line-height: 1.2;
+}
+
+
+/* Seções de Conteúdo (mantido do código anterior) */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.content-section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--cor-melado-escuro);
+    margin-bottom: 30px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif; /* Altera a fonte dos títulos de seção também */
+}
+
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--cor-destaque-melado);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Estilo Card para seções */
+.card {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda-card);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.card p, .card ul, .card li {
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+    font-family: 'Dancing Script', cursive; /* Mantém a fonte script para o texto */
+}
+
+.card ul {
+    list-style: disc inside;
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 8px;
 }
 
 .card-grid {
@@ -26,9 +197,165 @@
     margin-top: 30px;
 }
 
-/* Para garantir que as imagens da galeria no main (caso você volte a colocar no index)
-   mantenham o tamanho fixo (no galeria.html já está ok com o ../img) */
+
+/* Galeria de Fotos (Estilo Pinterest) - Mantido */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--cor-melado-medio);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.gallery-item {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda-card);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
 .gallery-item img {
-    height: 300px; /* Mantém a altura fixa para consistência */
+    width: 100%;
+    height: 300px;
     object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--cor-borda-card);
+}
+
+/* Formulário de Cadastro (Mantido) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid var(--cor-borda-card);
+    border-radius: 5px;
+    font-family: 'Dancing Script', cursive; /* Mantém a fonte script */
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.button, .button-small {
+    background-color: var(--cor-destaque-melado);
+    color: #FFF;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-family: 'Dancing Script', cursive; /* Mantém a fonte script */
+    text-decoration: none; /* Para links com classe button */
+    display: inline-block; /* Para que padding e margin funcionem */
+}
+
+.button:hover, .button-small:hover {
+    background-color: var(--cor-melado-escuro);
+}
+
+.button-small {
+    padding: 8px 15px;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+/* Contato (Mantido) */
+.social-links a {
+    display: inline-block;
+    background-color: var(--cor-melado-escuro);
+    color: #FFF;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    font-family: 'Dancing Script', cursive; /* Mantém a fonte script */
+}
+
+.social-links a:hover {
+    background-color: var(--cor-destaque-melado);
+}
+
+/* Footer (Mantido) */
+footer {
+    background-color: var(--cor-melado-escuro);
+    color: #FFF;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    border-top: 5px solid var(--cor-destaque-melado);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column; /* Empilha logo e nav em telas menores */
+        padding: 15px;
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin-bottom: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    .hero-banner h2 {
+        font-size: 2.5rem;
+    }
+    .content-section h2 {
+        font-size: 2rem;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    .hero-banner h2 {
+        font-size: 1.8rem;
+        padding: 0 10px;
+    }
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
 }
