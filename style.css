@@ -1,65 +1,110 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feira do Melado</title>
-    <link rel="stylesheet" href="estilo.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>Feira do Melado</h1>
-        <nav>
-            <ul>
-                <li><a href="#cadastro">Cadastro</a></li>
-                <li><a href="#historia">História</a></li>
-                <li><a href="#atracoes">Atrações</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    margin: 0;
+    font-family: 'Great Vibes', cursive;
+    background-color: #fff8e1;
+    color: #5d4037;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    <section id="cadastro">
-        <h2>Cadastro</h2>
-        <form>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
-        </form>
-    </section>
+header {
+    background-color: #ffcc80;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
-    <section id="historia">
-        <h2>História</h2>
-        <p>A Feira do Melado é uma tradicional celebração da nossa cultura local...</p>
-    </section>
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
 
-    <section id="atracoes">
-        <h2>Atrações</h2>
-        <ul>
-            <li>Shows musicais</li>
-            <li>Feira de artesanato</li>
-            <li>Comidas típicas com muito melado</li>
-        </ul>
-    </section>
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
 
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Email: contato@feiradomelado.com</p>
-        <p>Telefone: (99) 99999-9999</p>
-    </section>
+nav a {
+    text-decoration: none;
+    color: #6d4c41;
+    font-size: 1.2em;
+}
 
-    <section id="galeria" class="galeria">
-        <h2>Galeria de Fotos</h2>
-        <div class="fotos">
-            <img src="img1.jpg" alt="Foto 1">
-            <img src="img2.jpg" alt="Foto 2">
-            <img src="img3.jpg" alt="Foto 3">
-            <img src="img4.jpg" alt="Foto 4">
-            <img src="img5.jpg" alt="Foto 5">
-            <img src="img6.jpg" alt="Foto 6">
-        </div>
-    </section>
-</body>
-</html>
+section {
+    background-color: #fff3e0;
+    margin: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    width: 90%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bcaaa4;
+    border-radius: 10px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffb74d;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.2em;
+    color: #4e342e;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffa726;
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+    line-height: 2;
+    font-size: 1.2em;
+}
+
+.galeria .fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
