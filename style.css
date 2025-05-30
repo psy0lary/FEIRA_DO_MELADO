@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feira do Melado</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Feira do Melado</h1>
+        <nav>
+            <ul>
+                <li><a href="#cadastro">Cadastro</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#atracoes">Atrações</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cadastro">
+        <h2>Cadastro</h2>
+        <form>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
+
+    <section id="historia">
+        <h2>História</h2>
+        <p>A Feira do Melado é uma tradicional celebração da nossa cultura local...</p>
+    </section>
+
+    <section id="atracoes">
+        <h2>Atrações</h2>
+        <ul>
+            <li>Shows musicais</li>
+            <li>Feira de artesanato</li>
+            <li>Comidas típicas com muito melado</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Email: contato@feiradomelado.com</p>
+        <p>Telefone: (99) 99999-9999</p>
+    </section>
+
+    <section id="galeria" class="galeria">
+        <h2>Galeria de Fotos</h2>
+        <div class="fotos">
+            <img src="img1.jpg" alt="Foto 1">
+            <img src="img2.jpg" alt="Foto 2">
+            <img src="img3.jpg" alt="Foto 3">
+            <img src="img4.jpg" alt="Foto 4">
+            <img src="img5.jpg" alt="Foto 5">
+            <img src="img6.jpg" alt="Foto 6">
+        </div>
+    </section>
+</body>
+</html>
